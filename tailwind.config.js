@@ -5,11 +5,18 @@ module.exports = {
   },
   purge: [],
   theme: {
+    fontSize: {
+      'xs': ['8px', 'normal'],
+      'sm': ['10px', 'normal'],
+      'tiny': ['12px', 'normal'],
+      'base': ['13px', 'normal'],
+      'lg': ['16px', 'normal'],
+    },
     extend: {
       colors: {
-        'regal-blue': '#243c5a',
         "ofn-orange": "#E4B231",
-        "ofn-green": "#69A95D"
+        "ofn-dark-orange": "#E47131",
+        "ofn-green": "#69A95D",
       }
     },
   },
