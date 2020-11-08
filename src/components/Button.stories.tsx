@@ -7,6 +7,7 @@ import { Button, ButtonProps } from './Button';
 export default {
   title: 'Example/Button',
   component: Button,
+  argTypes: { onClick: { action: 'clicked' } },
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
