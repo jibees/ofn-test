@@ -55,6 +55,7 @@
     "babel-loader": "^8.1.0",
     "postcss": "^8.1.6",
     "postcss-cli": "^8.2.0",
-    "react-is": "^17.0.1"
+    "react-is": "^17.0.1",
+    "react-test-renderer": "^17.0.1"
   }
 }
