@@ -14,8 +14,8 @@ export const ProductList: React.FC<ProductListProps> = ({
 }) => {
   return (
     <div className="max-w-screen-sm m-auto">
-      {products.map((product) => (
-        <div className="mt-4" key={product.name}>
+      {products.map((product, index) => (
+        <div className="mt-4" key={product.name + index}>
           <Product {...product} />
         </div>
       ))}

@@ -1,4 +1,5 @@
 import { atom, selector } from "recoil";
+import { ProductApi } from "../../api/api";
 import { productListQuery } from "../productList";
 
 /**
@@ -22,12 +23,15 @@ export const selectedProductsCount = selector({
 /**
  * Get the list of the selected product
  */
-export const selectedProductList = selector({
+export const selectedProductList = selector<ProductApi[]>({
   key: "selectedProductList",
   get: ({ get }) => {
-    return get(productListQuery).filter(
-      (product) => get(selectedProductsIdState).indexOf(product.id) !== -1
-    );
+    const productList = get(productListQuery);
+    const selectedProductIds = get(selectedProductsIdState);
+    const ret = selectedProductIds.map((id) => {
+      return productList.find((p) => p.id === id);
+    }) as ProductApi[];
+    return ret;
   },
 });
 

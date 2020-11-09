@@ -19,7 +19,10 @@ export function SelectedProductList() {
       removeHandler: (id: number) => {
         // Remove the current product in the oldList of selectedProductsId
         setSelectedProduct((oldList) => {
-          return oldList.filter((item) => item !== id);
+          const idx = oldList.findIndex((item) => item === id);
+          const ret = oldList.slice();
+          ret.splice(idx, 1);
+          return ret;
         });
       },
     }));
