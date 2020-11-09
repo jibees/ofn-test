@@ -11,6 +11,7 @@ module.exports = {
       'tiny': ['12px', 'normal'],
       'base': ['13px', 'normal'],
       'lg': ['16px', 'normal'],
+      'xl': ['20px', 'normal'],
     },
     extend: {
       colors: {

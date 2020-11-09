@@ -10776,6 +10776,11 @@ video {
   line-height: normal;
 }
 
+.text-xl {
+  font-size: 20px;
+  line-height: normal;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -29727,6 +29732,11 @@ video {
     line-height: normal;
   }
 
+  .sm\:text-xl {
+    font-size: 20px;
+    line-height: normal;
+  }
+
   .sm\:leading-3 {
     line-height: .75rem;
   }
@@ -48645,6 +48655,11 @@ video {
 
   .md\:text-lg {
     font-size: 16px;
+    line-height: normal;
+  }
+
+  .md\:text-xl {
+    font-size: 20px;
     line-height: normal;
   }
 
@@ -67569,6 +67584,11 @@ video {
     line-height: normal;
   }
 
+  .lg\:text-xl {
+    font-size: 20px;
+    line-height: normal;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -86487,6 +86507,11 @@ video {
 
   .xl\:text-lg {
     font-size: 16px;
+    line-height: normal;
+  }
+
+  .xl\:text-xl {
+    font-size: 20px;
     line-height: normal;
   }
 
