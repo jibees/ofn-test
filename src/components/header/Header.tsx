@@ -10,6 +10,10 @@ export interface HeaderProps {
    * Handler when clicking on "My Cart" label
    */
   myCartHandler: () => void;
+  /**
+   * Handler when clicking on Logo
+   */
+  logoHandler: () => void;
 }
 
 /**
@@ -18,12 +22,16 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   itemsCount,
   myCartHandler,
+  logoHandler,
   ...props
 }) => {
   return (
     <nav className=" bg-white p-6 shadow-lg">
       <div className="flex items-center justify-between flex-wrap m-auto max-w-screen-lg">
-        <div className="flex items-center flex-no-shrink text-gray-800 mr-6">
+        <div
+          className="flex items-center flex-no-shrink text-gray-800 mr-6 cursor-pointer"
+          onClick={(e) => logoHandler()}
+        >
           <Logo />
           <span className="text-gray-700 text-lg tracking-tight ml-4">
             Open Food

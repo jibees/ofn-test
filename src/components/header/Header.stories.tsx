@@ -7,7 +7,10 @@ import { Header, HeaderProps } from "./Header";
 export default {
   title: "Example/Header",
   component: Header,
-  argTypes: { myCartHandler: { action: "'My Cart' clicked" } },
+  argTypes: {
+    myCartHandler: { action: "'My Cart' clicked" },
+    logoHandler: { action: "Logo clicked" },
+  },
 } as Meta;
 
 const Template: Story<HeaderProps> = (args) => <Header {...args} />;
