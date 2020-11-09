@@ -1,20 +1,27 @@
 import React from "react";
 import "./assets/main.css";
 import { RecoilRoot } from "recoil";
-import { ProductList } from "./containers/ProductList";
 import { Header } from "./containers/Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HomePage } from "./pages/Home";
+import { MyCartPage } from "./pages/MyCart";
 
 function App() {
   return (
     <RecoilRoot>
-      <div>
-        <Header />
-        <div className="w-full max-w-screen-lg m-auto">
-          <React.Suspense fallback={<div>Loading...</div>}>
-            <ProductList />
-          </React.Suspense>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/my-cart">
+              <MyCartPage />
+            </Route>
+          </Switch>
         </div>
-      </div>
+      </Router>
     </RecoilRoot>
   );
 }
