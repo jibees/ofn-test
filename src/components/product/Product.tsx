@@ -41,7 +41,7 @@ export const Product: React.FC<ProductProps> = ({
   ...props
 }) => {
   return (
-    <div className="w-full max-w-full flex shadow border rounded border-gray-400 p-4">
+    <div className="w-full max-w-full flex shadow border rounded border-gray-400 p-4 bg-white">
       <img className="w-12 h-12 mt-4" src={image} alt="bag"></img>
       <div className="px-4 py-4 w-full ">
         <div className="flex items-baseline justify-between w-full">
