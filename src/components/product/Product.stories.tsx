@@ -13,16 +13,19 @@ const Template: Story<ProductProps> = (args) => <Product {...args} />;
 
 export const Garlic = Template.bind({});
 Garlic.args = {
+  id: 1,
   name: "Garlic",
   image: "./images/garlic.png",
   description: "Useful to scare vampires",
   price: "0.5",
   quantity: "100g",
   family: "Vegetables",
+  addToCartHandler: (productId) => console.log(productId),
 };
 
 export const Potatoes = Template.bind({});
 Potatoes.args = {
+  id: 5,
   name: "Potatoes",
   image: "./images/potatoes.png",
   description:
@@ -30,13 +33,16 @@ Potatoes.args = {
   price: "0.5",
   quantity: "1kg",
   family: "Vegetables",
+  addToCartHandler: (productId) => console.log(productId),
 };
 export const Tomatoes = Template.bind({});
 Tomatoes.args = {
+  id: 6,
   name: "Tomatoes",
   image: "./images/tomatoes.png",
   description: "Excellent choice for a fresh salad",
   price: "2.20",
   quantity: "500g",
   family: "Fruits",
+  addToCartHandler: (productId) => console.log(productId),
 };

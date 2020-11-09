@@ -3,6 +3,10 @@ import { Button } from "../button/Button";
 
 export interface ProductProps {
   /**
+   * Id of the product
+   */
+  id: number;
+  /**
    * The display name of the product
    */
   name: string;
@@ -26,18 +30,24 @@ export interface ProductProps {
    * Define a displayable quantity (quantity + unit)
    */
   quantity: string;
+  /**
+   * Handler when clicking on "Add to cart" button
+   */
+  addToCartHandler?: (id: number) => void;
 }
 export type ProductFamily = "Vegetables" | "Fruits";
 /**
  * Display a Product
  */
 export const Product: React.FC<ProductProps> = ({
+  id,
   name,
   image,
   price,
   description,
   quantity,
   family,
+  addToCartHandler,
   ...props
 }) => {
   return (
@@ -61,7 +71,10 @@ export const Product: React.FC<ProductProps> = ({
             Price
             <span className="ml-2 text-gray-600 text-tiny">&euro;{price}</span>
           </div>
-          <Button label="Add to cart" />
+          <Button
+            label="Add to cart"
+            onClick={() => addToCartHandler && addToCartHandler(id)}
+          />
         </div>
       </div>
     </div>

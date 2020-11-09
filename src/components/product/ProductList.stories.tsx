@@ -15,6 +15,7 @@ export const Default = Template.bind({});
 Default.args = {
   products: [
     {
+      id: 1,
       name: "Garlic",
       image: "./images/garlic.png",
       description: "Useful to scare vampires",
@@ -23,6 +24,7 @@ Default.args = {
       family: "Vegetables",
     },
     {
+      id: 5,
       name: "Potatoes",
       image: "./images/potatoes.png",
       description:
@@ -32,6 +34,7 @@ Default.args = {
       family: "Vegetables",
     },
     {
+      id: 6,
       name: "Tomatoes",
       image: "./images/tomatoes.png",
       description: "Excellent choice for a fresh salad",
