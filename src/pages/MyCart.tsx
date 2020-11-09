@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { SelectedProductList } from "../containers/SelectedProductList";
 
 /**
@@ -6,7 +7,11 @@ import { SelectedProductList } from "../containers/SelectedProductList";
  */
 export const MyCartPage = () => {
   return (
-    <div className="w-full max-w-screen-lg m-auto">
+    <div className="w-full max-w-screen-md m-auto mt-5">
+      <Link to="/">
+        <span className="text-gray-600 text-tiny">← Back to Products</span>
+      </Link>
+      <div className="text-gray-600 font-medium text-xl mt-5">My Cart</div>
       <React.Suspense fallback={<div>Loading...</div>}>
         <SelectedProductList />
       </React.Suspense>
