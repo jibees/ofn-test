@@ -1,5 +1,15 @@
 import React from "react";
+import { SelectedProductList } from "../containers/SelectedProductList";
 
-export const MyCartPage = () => (
-  <div className="w-full max-w-screen-lg m-auto">My cart</div>
-);
+/**
+ * Display the selected list of product
+ */
+export const MyCartPage = () => {
+  return (
+    <div className="w-full max-w-screen-lg m-auto">
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <SelectedProductList />
+      </React.Suspense>
+    </div>
+  );
+};
