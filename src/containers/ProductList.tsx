@@ -19,7 +19,9 @@ const productListQuery = selector({
  * Mapper to transform a product from api to a product for <Product /> Component
  * @param apiProduct
  */
-const fromApiToComponentMapper = (product: ProductApi): ProductProps => ({
+export const fromApiToComponentMapper = (
+  product: ProductApi
+): ProductProps => ({
   name: product.name,
   image: product.images.thumb_url,
   description: product.description,
