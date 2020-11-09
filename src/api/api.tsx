@@ -41,8 +41,7 @@ export function getProductList() {
       images: {
         id: 1,
         alt: "a garlic",
-        thumb_url:
-          "https://staging.openfoodfrance.org/spree/products/94/mini/OFF.png",
+        thumb_url: "./images/garlic.png",
         small_url:
           "https://staging.openfoodfrance.org/spree/products/94/small/OFF.png",
         image_url:
@@ -69,8 +68,7 @@ export function getProductList() {
       images: {
         id: 2,
         alt: "a bunch of potates",
-        thumb_url:
-          "https://staging.openfoodfrance.org/spree/products/94/mini/OFF.png",
+        thumb_url: "./images/potatoes.png",
         small_url:
           "https://staging.openfoodfrance.org/spree/products/94/small/OFF.png",
         image_url:
@@ -96,8 +94,7 @@ export function getProductList() {
       images: {
         id: 3,
         alt: "shinny tomates",
-        thumb_url:
-          "https://staging.openfoodfrance.org/spree/products/94/mini/OFF.png",
+        thumb_url: "./images/tomatoes.png",
         small_url:
           "https://staging.openfoodfrance.org/spree/products/94/small/OFF.png",
         image_url:
