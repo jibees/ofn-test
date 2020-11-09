@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductApi } from "../api/api";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { selectedProductsIdState } from "../state/selectedProducts";
 import { ProductList as ProductListComponent } from "../components/product/ProductList";
 import { ProductFamily, ProductProps } from "../components/product/Product";
 import { productListQuery } from "../state/productList";
@@ -12,6 +13,7 @@ import { productListQuery } from "../state/productList";
 export const fromApiToComponentMapper = (
   product: ProductApi
 ): ProductProps => ({
+  id: product.id,
   name: product.name,
   image: product.images.thumb_url,
   description: product.description,
@@ -22,9 +24,16 @@ export const fromApiToComponentMapper = (
 
 export function ProductList() {
   const productList = useRecoilValue(productListQuery);
-  return (
-    <ProductListComponent
-      products={productList.map(fromApiToComponentMapper)}
-    />
-  );
+  const setSelectedProduct = useSetRecoilState(selectedProductsIdState);
+  const productListForComponent = productList
+    .map(fromApiToComponentMapper)
+    .map((p) => ({
+      ...p,
+      // For each produc, add its own handler to add the current product in the cart
+      addToCartHandler: (id: number) => {
+        // Add the current product in the oldList of selectedProductsId
+        setSelectedProduct((oldList) => [...oldList, id]);
+      },
+    }));
+  return <ProductListComponent products={productListForComponent} />;
 }

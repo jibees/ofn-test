@@ -1,10 +1,9 @@
-
 import { atom, selector } from "recoil";
 
 /**
  * Piece of state where selected products id are stored
  */
-export const selectedProductsIdState = atom({
+export const selectedProductsIdState = atom<number[]>({
   key: "selectedProductsId",
   default: [],
 });
