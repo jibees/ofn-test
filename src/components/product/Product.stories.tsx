@@ -18,7 +18,7 @@ Garlic.args = {
   description: "Useful to scare vampires",
   price: "0.5",
   quantity: "100g",
-  family: "vegetables",
+  family: "Vegetables",
 };
 
 export const Potatoes = Template.bind({});
@@ -29,7 +29,7 @@ Potatoes.args = {
     "This potatoes are suitable for frying. Perfect for your tortillas de patatas",
   price: "0.5",
   quantity: "1kg",
-  family: "vegetables",
+  family: "Vegetables",
 };
 export const Tomatoes = Template.bind({});
 Tomatoes.args = {
@@ -38,5 +38,5 @@ Tomatoes.args = {
   description: "Excellent choice for a fresh salad",
   price: "2.20",
   quantity: "500g",
-  family: "fruits",
+  family: "Fruits",
 };

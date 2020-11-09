@@ -27,7 +27,7 @@ export interface ProductProps {
    */
   quantity: string;
 }
-export type ProductFamily = "vegetables" | "fruits";
+export type ProductFamily = "Vegetables" | "Fruits";
 /**
  * Display a Product
  */

@@ -20,7 +20,7 @@ Default.args = {
       description: "Useful to scare vampires",
       price: "0.5",
       quantity: "100g",
-      family: "vegetables",
+      family: "Vegetables",
     },
     {
       name: "Potatoes",
@@ -29,7 +29,7 @@ Default.args = {
         "This potatoes are suitable for frying. Perfect for your tortillas de patatas",
       price: "0.5",
       quantity: "1kg",
-      family: "vegetables",
+      family: "Vegetables",
     },
     {
       name: "Tomatoes",
@@ -37,7 +37,7 @@ Default.args = {
       description: "Excellent choice for a fresh salad",
       price: "2.20",
       quantity: "500g",
-      family: "fruits",
+      family: "Fruits",
     },
   ],
 };
