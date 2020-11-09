@@ -20,8 +20,8 @@ Garlic.args = {
   price: "0.5",
   quantity: "100g",
   family: "Vegetables",
-  addToCartHandler: (productId) => console.log(productId),
 };
+Garlic.argTypes = { addToCartHandler: { action: "Add to 'My cart" } };
 
 export const Potatoes = Template.bind({});
 Potatoes.args = {
@@ -33,8 +33,9 @@ Potatoes.args = {
   price: "0.5",
   quantity: "1kg",
   family: "Vegetables",
-  addToCartHandler: (productId) => console.log(productId),
 };
+Potatoes.argTypes = { addToCartHandler: { action: "Add to 'My cart" } };
+
 export const Tomatoes = Template.bind({});
 Tomatoes.args = {
   id: 6,
@@ -44,5 +45,18 @@ Tomatoes.args = {
   price: "2.20",
   quantity: "500g",
   family: "Fruits",
-  addToCartHandler: (productId) => console.log(productId),
 };
+Tomatoes.argTypes = { addToCartHandler: { action: "Add to 'My cart" } };
+
+export const TomatoesInMyCart = Template.bind({});
+TomatoesInMyCart.args = {
+  id: 6,
+  name: "Tomatoes",
+  image: "./images/tomatoes.png",
+  description: "Excellent choice for a fresh salad",
+  price: "2.20",
+  quantity: "500g",
+  family: "Fruits",
+  inMyCart: true,
+};
+TomatoesInMyCart.argTypes = { removeHandler: { action: "Remove" } };

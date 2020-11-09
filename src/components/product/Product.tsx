@@ -31,9 +31,17 @@ export interface ProductProps {
    */
   quantity: string;
   /**
+   * Boolean expressing if the product is in 'My Cart'
+   */
+  inMyCart?: boolean;
+  /**
    * Handler when clicking on "Add to cart" button
    */
   addToCartHandler?: (id: number) => void;
+  /**
+   * Handler when clicking on "Remove" button
+   */
+  removeHandler?: (id: number) => void;
 }
 export type ProductFamily = "Vegetables" | "Fruits";
 /**
@@ -47,7 +55,9 @@ export const Product: React.FC<ProductProps> = ({
   description,
   quantity,
   family,
+  inMyCart = false,
   addToCartHandler,
+  removeHandler,
   ...props
 }) => {
   return (
@@ -71,10 +81,19 @@ export const Product: React.FC<ProductProps> = ({
             Price
             <span className="ml-2 text-gray-600 text-tiny">&euro;{price}</span>
           </div>
-          <Button
-            label="Add to cart"
-            onClick={() => addToCartHandler && addToCartHandler(id)}
-          />
+          {!inMyCart && (
+            <Button
+              label="Add to cart"
+              onClick={() => addToCartHandler && addToCartHandler(id)}
+            />
+          )}
+          {inMyCart && (
+            <Button
+              label="Remove"
+              color="dark-orange"
+              onClick={() => removeHandler && removeHandler(id)}
+            />
+          )}
         </div>
       </div>
     </div>
