@@ -29,7 +29,8 @@ const productFromApi = {
 }
 
 const productForComponent = {
-name: "Garlic",
+  id: 1,
+  name: "Garlic",
   image: "./images/garlic.png",
   description: "Useful to scare vampires",
   price: "0.5",
