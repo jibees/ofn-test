@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from "@storybook/react/types-6-0";
 
-import { ProductList, ProductListProps } from './ProductList';
+import { ProductList, ProductListProps } from "./ProductList";
 
 export default {
-  title: 'Example/ProductList',
+  title: "Example/ProductList",
   component: ProductList,
 } as Meta;
 
@@ -18,25 +18,26 @@ Default.args = {
       name: "Garlic",
       image: "./images/garlic.png",
       description: "Useful to scare vampires",
-      price: 0.5,
+      price: "0.5",
       quantity: "100g",
-      family: "vegetables" 
+      family: "vegetables",
     },
     {
       name: "Potatoes",
       image: "./images/potatoes.png",
-      description: "This potatoes are suitable for frying. Perfect for your tortillas de patatas",
-      price: 0.5,
+      description:
+        "This potatoes are suitable for frying. Perfect for your tortillas de patatas",
+      price: "0.5",
       quantity: "1kg",
-      family: "vegetables" 
+      family: "vegetables",
     },
     {
       name: "Tomatoes",
       image: "./images/tomatoes.png",
       description: "Excellent choice for a fresh salad",
-      price: 2.20,
+      price: "2.20",
       quantity: "500g",
-      family: "fruits"
-    }
-  ]
+      family: "fruits",
+    },
+  ],
 };
