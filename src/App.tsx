@@ -1,14 +1,14 @@
 import React from "react";
 import "./assets/main.css";
-import { Header } from "./components/header/Header";
 import { RecoilRoot } from "recoil";
 import { ProductList } from "./containers/ProductList";
+import { Header } from "./containers/Header";
 
 function App() {
   return (
     <RecoilRoot>
       <div>
-        <Header itemsCount={0} />
+        <Header />
         <div className="w-full max-w-screen-lg m-auto">
           <React.Suspense fallback={<div>Loading...</div>}>
             <ProductList />
