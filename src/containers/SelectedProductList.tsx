@@ -23,5 +23,12 @@ export function SelectedProductList() {
         });
       },
     }));
+  if (productListForComponent.length === 0) {
+    return (
+      <div className="w-full text-center text-gray-600 mt-20">
+        Empty cart, no fun ;(
+      </div>
+    );
+  }
   return <ProductListComponent products={productListForComponent} />;
 }
