@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MyCartTotal } from "../containers/MyCartTotal";
 import { SelectedProductList } from "../containers/SelectedProductList";
 
 /**
@@ -14,6 +15,7 @@ export const MyCartPage = () => {
       <div className="text-gray-600 font-medium text-xl mt-5">My Cart</div>
       <React.Suspense fallback={<div>Loading...</div>}>
         <SelectedProductList />
+        <MyCartTotal />
       </React.Suspense>
     </div>
   );

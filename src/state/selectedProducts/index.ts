@@ -19,11 +19,26 @@ export const selectedProductsCount = selector({
   },
 });
 
+/**
+ * Get the list of the selected product
+ */
 export const selectedProductList = selector({
   key: "selectedProductList",
   get: ({ get }) => {
     return get(productListQuery).filter(
       (product) => get(selectedProductsIdState).indexOf(product.id) !== -1
     );
+  },
+});
+
+/**
+ * Get the total price of the selected products
+ */
+export const selectedProductTotalPrice = selector({
+  key: "selectedProductTotalPrice",
+  get: ({ get }) => {
+    return get(selectedProductList).reduce((total, p) => {
+      return total + parseFloat(p.price);
+    }, 0);
   },
 });
